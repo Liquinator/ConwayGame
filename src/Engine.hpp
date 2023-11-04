@@ -3,6 +3,8 @@
 #include "SDL.h"
 #include <memory>
 
+#include "Board.hpp"
+
 namespace Conway
 {
     class Engine
@@ -24,7 +26,7 @@ namespace Conway
         bool mUpdate = false;
         bool mRunning = true;
 
-        // std::unique_ptr<Board> mBoard;
+        std::unique_ptr<Board> mBoard;
         SDL_Window *mWindow;
         SDL_Renderer *mRenderer;
     };
